@@ -113,11 +113,11 @@ def load_demo_data(algorithm, segment):
 
 def load_real_data(segment):
     """Загрузка реальных данных из CSV"""
-    data_dir = Path("data/raw")
+    data_dir = Path("../data/MH_01_easy/")
     csv_files = list(data_dir.glob(f"*{segment}*.csv"))
 
     if not csv_files:
-        st.warning(f"Не найдены CSV файлы для сегмента '{segment}' в data/raw/")
+        st.warning(f"Не найдены CSV файлы для сегмента '{segment}' в data/")
         st.info("Положите CSV файлы с колонками: timestamp, gt_x, gt_y, gt_z, est_x, est_y, est_z")
         return None
 
